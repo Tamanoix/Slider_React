@@ -64,7 +64,7 @@ const Slider = () => {
             { dataSlider.map((obj, index) => {
                 return (
                     <div 
-                    key={obj}
+                    key={obj.id}
                     className={slideAnim.index === index + 1 ? 
                         "slide active-anim" : "slide"}
                     >
@@ -82,6 +82,7 @@ const Slider = () => {
                     className={slideAnim.index === index + 1 ? 
                     "dot active" : "dot"}
                     onClick={() => moveDot(index + 1)}
+                    key={index}
                     ></div>
                 })}
             </div>
